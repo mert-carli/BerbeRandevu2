@@ -1,6 +1,12 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/img/:path*",
+      "destination": "/IMG/:path*"
+    }
+  ],
   "headers": [
     {
       "source": "/sw.js",
