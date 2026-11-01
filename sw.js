@@ -1,9 +1,9 @@
 // ==========================================================================
 // RAMAZAN TOZ BARBER STUDIO - ENTERPRISE SERVICE WORKER (OFFLINE-FIRST)
-// Sürüm: v6.2.0
+// Sürüm: v6.2.1
 // ==========================================================================
 
-const CACHE_VERSION = 'v6.2.0';
+const CACHE_VERSION = 'v6.2.1';
 const STATIC_CACHE_NAME = `barberflow-static-${CACHE_VERSION}`;
 const DYNAMIC_CACHE_NAME = `barberflow-dynamic-${CACHE_VERSION}`;
 

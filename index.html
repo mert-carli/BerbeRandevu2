@@ -645,29 +645,29 @@
             </div>
 
             <!-- Yardımcı Göstergeler: Aylık Ciro & Ortalama Sepet -->
-            <div class="grid grid-cols-2 gap-2 text-center">
-              <div class="p-2.5 rounded-xl bg-surface-card border border-surface-border flex items-center justify-between px-3">
-                <div class="text-left">
+            <div class="grid grid-cols-2 gap-2 text-center min-w-0">
+              <div class="p-2 sm:p-2.5 rounded-xl bg-surface-card border border-surface-border flex items-center justify-between px-2.5 sm:px-3 min-w-0">
+                <div class="text-left min-w-0 mr-1">
                   <span class="text-[10px] font-semibold text-zinc-400 block truncate">Aylık Ciro</span>
                   <span id="statMonthlyMonthLabel" class="text-[9px] text-zinc-500 block truncate">Bu Ay</span>
                 </div>
-                <div id="statMonthlyRevenue" class="text-base sm:text-lg font-bold text-zinc-100 font-mono">₺0</div>
+                <div id="statMonthlyRevenue" class="text-sm sm:text-base font-bold text-zinc-100 font-mono truncate shrink-0">₺0</div>
               </div>
-              <div class="p-2.5 rounded-xl bg-surface-card border border-surface-border flex items-center justify-between px-3">
-                <div class="text-left">
+              <div class="p-2 sm:p-2.5 rounded-xl bg-surface-card border border-surface-border flex items-center justify-between px-2.5 sm:px-3 min-w-0">
+                <div class="text-left min-w-0 mr-1">
                   <span class="text-[10px] font-semibold text-zinc-400 block truncate">Ort. Sepet</span>
                   <span class="text-[9px] text-zinc-500 block truncate">Müşteri Başı</span>
                 </div>
-                <div id="statAvgBasket" class="text-base sm:text-lg font-bold text-zinc-300 font-mono">₺0</div>
+                <div id="statAvgBasket" class="text-sm sm:text-base font-bold text-zinc-300 font-mono truncate shrink-0">₺0</div>
               </div>
             </div>
           </div>
 
           <!-- Ödeme Dağılımı: Sadeleştirilmiş Yatay Çubuk + Tek Satır Özet -->
-          <div class="space-y-1.5 pt-1.5 border-t border-zinc-800/60">
-            <div class="flex justify-between items-center text-[11px]">
-              <span class="text-zinc-400 font-medium">Ödeme Dağılımı</span>
-              <span class="text-zinc-500 text-[10px]" id="statPaymentBreakdownPercent">Henüz ödeme yok</span>
+          <div class="space-y-1.5 pt-1.5 border-t border-zinc-800/60 min-w-0">
+            <div class="flex justify-between items-center text-[11px] min-w-0">
+              <span class="text-zinc-400 font-medium truncate">Ödeme Dağılımı</span>
+              <span class="text-zinc-500 text-[10px] truncate" id="statPaymentBreakdownPercent">Henüz ödeme yok</span>
             </div>
 
             <!-- Yatay İlerleme Çubuğu -->
@@ -678,20 +678,20 @@
             </div>
 
             <!-- Temiz Tek Satır Özet: Nakit ... · Kart ... · Havale ... -->
-            <div class="flex items-center justify-between text-[11px] text-zinc-400 font-mono pt-0.5 px-0.5">
-              <span class="flex items-center gap-1.5">
+            <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1 text-[10px] sm:text-[11px] text-zinc-400 font-mono pt-0.5 px-0.5 min-w-0">
+              <span class="flex items-center gap-1.5 shrink-0">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block"></span>
                 <span>Nakit</span>
                 <strong id="statCashAmount" class="text-zinc-200 font-bold">0 ₺</strong>
               </span>
-              <span class="text-zinc-700">·</span>
-              <span class="flex items-center gap-1.5">
+              <span class="text-zinc-700 hidden xs:inline">·</span>
+              <span class="flex items-center gap-1.5 shrink-0">
                 <span class="w-1.5 h-1.5 rounded-full bg-zinc-300 inline-block"></span>
                 <span>Kart</span>
                 <strong id="statCardAmount" class="text-zinc-200 font-bold">0 ₺</strong>
               </span>
-              <span class="text-zinc-700">·</span>
-              <span class="flex items-center gap-1.5">
+              <span class="text-zinc-700 hidden xs:inline">·</span>
+              <span class="flex items-center gap-1.5 shrink-0">
                 <span class="w-1.5 h-1.5 rounded-full bg-zinc-600 inline-block"></span>
                 <span>Havale</span>
                 <strong id="statTransferAmount" class="text-zinc-400 font-bold">0 ₺</strong>
@@ -1909,11 +1909,11 @@
   </div>
 
   <!-- MODAL 11: GÜN SONU KASA RAPORU (NAKİT YÖNETİMİ & FAALİYET SONUCU) -->
-  <div id="registerClosureModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-3 hidden overscroll-contain animate-fade-in">
-    <div class="w-full max-w-md bg-[#0e1017] border-t sm:border border-amber-500/40 rounded-t-3xl sm:rounded-2xl p-4 sm:p-5 max-h-[92vh] overflow-y-auto space-y-3.5 animate-slide-up sm:animate-none shadow-2xl" style="padding-bottom: max(1.25rem, env(safe-area-inset-bottom));">
+  <div id="registerClosureModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-3 hidden overscroll-contain overflow-x-hidden animate-fade-in">
+    <div class="w-full max-w-lg bg-[#0e1017] border-t sm:border border-amber-500/40 rounded-t-3xl sm:rounded-2xl p-3.5 sm:p-5 max-h-[92vh] overflow-y-auto overflow-x-hidden space-y-3 animate-slide-up sm:animate-none shadow-2xl box-border" style="padding-bottom: max(1.25rem, env(safe-area-inset-bottom));">
       
-      <div class="flex items-center justify-between pb-2 border-b border-zinc-800/80">
-        <div class="flex items-center gap-2">
+      <div class="flex items-center justify-between pb-2 border-b border-zinc-800/80 min-w-0">
+        <div class="flex items-center gap-2 min-w-0">
           <div class="w-8 h-8 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-400 flex items-center justify-center shrink-0">
             <i data-lucide="calculator" class="w-4 h-4"></i>
           </div>
@@ -1928,81 +1928,81 @@
       </div>
 
       <!-- KASA HAREKETLERİ (AÇILIŞ NAKDİ, GİRİŞ & ÇIKIŞ) -->
-      <div class="p-3 rounded-2xl bg-surface-card border border-surface-border space-y-2 text-xs">
-        <div class="flex items-center justify-between">
-          <span class="text-[10px] font-extrabold uppercase tracking-wider text-amber-400 block">Kasa Hareketleri (Nakit Yönetimi)</span>
-          <span class="text-[9px] text-zinc-500">Kasa Devri & Çekim</span>
+      <div class="p-3 rounded-2xl bg-surface-card border border-surface-border space-y-2 text-xs min-w-0">
+        <div class="flex items-center justify-between min-w-0">
+          <span class="text-[10px] font-extrabold uppercase tracking-wider text-amber-400 block truncate">Kasa Hareketleri (Nakit Yönetimi)</span>
+          <span class="text-[9px] text-zinc-500 truncate ml-2">Devir & Çekim</span>
         </div>
-        <div class="grid grid-cols-3 gap-1.5">
-          <div>
-            <label class="block text-[10px] text-zinc-400 mb-0.5 truncate">Açılış Nakdi (₺)</label>
-            <input type="number" id="closureOpeningCashInput" oninput="App.onLedgerInputChange()" placeholder="0" class="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-2 py-1.5 text-zinc-100 font-mono text-xs font-bold focus:outline-none focus:border-amber-400 box-border">
+        <div class="grid grid-cols-3 gap-1.5 sm:gap-2 min-w-0">
+          <div class="min-w-0">
+            <label class="block text-[10px] text-zinc-400 mb-0.5 truncate">Açılış (₺)</label>
+            <input type="number" id="closureOpeningCashInput" oninput="App.onLedgerInputChange()" placeholder="0" class="w-full min-w-0 bg-zinc-900 border border-zinc-800 rounded-lg px-2 py-1.5 text-zinc-100 font-mono text-xs font-bold focus:outline-none focus:border-amber-400 box-border">
           </div>
-          <div>
-            <label class="block text-[10px] text-emerald-400 mb-0.5 truncate">+ Kasaya Eklenen</label>
-            <input type="number" id="closureCashInflowInput" oninput="App.onLedgerInputChange()" placeholder="0" class="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-2 py-1.5 text-emerald-300 font-mono text-xs font-bold focus:outline-none focus:border-emerald-400 box-border">
+          <div class="min-w-0">
+            <label class="block text-[10px] text-emerald-400 mb-0.5 truncate">+ Eklenen</label>
+            <input type="number" id="closureCashInflowInput" oninput="App.onLedgerInputChange()" placeholder="0" class="w-full min-w-0 bg-zinc-900 border border-zinc-800 rounded-lg px-2 py-1.5 text-emerald-300 font-mono text-xs font-bold focus:outline-none focus:border-emerald-400 box-border">
           </div>
-          <div>
-            <label class="block text-[10px] text-rose-400 mb-0.5 truncate">- Kasadan Çekilen</label>
-            <input type="number" id="closureCashOutflowInput" oninput="App.onLedgerInputChange()" placeholder="0" class="w-full bg-zinc-900 border border-zinc-800 rounded-lg px-2 py-1.5 text-rose-300 font-mono text-xs font-bold focus:outline-none focus:border-rose-400 box-border">
+          <div class="min-w-0">
+            <label class="block text-[10px] text-rose-400 mb-0.5 truncate">- Çekilen</label>
+            <input type="number" id="closureCashOutflowInput" oninput="App.onLedgerInputChange()" placeholder="0" class="w-full min-w-0 bg-zinc-900 border border-zinc-800 rounded-lg px-2 py-1.5 text-rose-300 font-mono text-xs font-bold focus:outline-none focus:border-rose-400 box-border">
           </div>
         </div>
       </div>
 
       <!-- 4 KRİTİK GÖSTERGE METRİĞİ (HİZMET CİROSU, TOPLAM TAHSİLAT, BEKLENEN NAKİT, FAALİYET SONUCU) -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2 text-center min-w-0">
         <!-- 1. Hizmet Cirosu -->
-        <div class="p-2.5 rounded-xl bg-surface-card border border-surface-border">
+        <div class="p-2 sm:p-2.5 rounded-xl bg-surface-card border border-surface-border min-w-0">
           <span class="text-[9px] font-semibold text-zinc-400 block truncate">Hizmet Cirosu</span>
-          <div id="closureTotalRevenue" class="text-sm sm:text-base font-extrabold text-amber-400 font-mono mt-0.5">₺0</div>
+          <div id="closureTotalRevenue" class="text-xs sm:text-sm font-extrabold text-amber-400 font-mono mt-0.5 truncate">₺0</div>
           <span class="text-[9px] text-zinc-500 block truncate" id="closureTxCount">0 işlem</span>
         </div>
 
         <!-- 2. Toplam Tahsilat -->
-        <div class="p-2.5 rounded-xl bg-surface-card border border-surface-border">
-          <span class="text-[9px] font-semibold text-zinc-400 block truncate">Toplam Tahsilat</span>
-          <div id="closureTotalCollected" class="text-sm sm:text-base font-extrabold text-zinc-100 font-mono mt-0.5">₺0</div>
-          <span class="text-[9px] text-zinc-500 block truncate">Nakit+Kart+Havale</span>
+        <div class="p-2 sm:p-2.5 rounded-xl bg-surface-card border border-surface-border min-w-0">
+          <span class="text-[9px] font-semibold text-zinc-400 block truncate">Top. Tahsilat</span>
+          <div id="closureTotalCollected" class="text-xs sm:text-sm font-extrabold text-zinc-100 font-mono mt-0.5 truncate">₺0</div>
+          <span class="text-[9px] text-zinc-500 block truncate">Nakit+Kart+Hav.</span>
         </div>
 
         <!-- 3. Beklenen Kasa Nakdi -->
-        <div class="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30">
+        <div class="p-2 sm:p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 min-w-0">
           <span class="text-[9px] font-bold text-emerald-300 block truncate">Beklenen Nakit</span>
-          <div id="closureCashInHand" class="text-sm sm:text-base font-extrabold text-emerald-400 font-mono mt-0.5">₺0</div>
-          <span class="text-[9px] text-emerald-500 block truncate">Formülle Bulunan</span>
+          <div id="closureCashInHand" class="text-xs sm:text-sm font-extrabold text-emerald-400 font-mono mt-0.5 truncate">₺0</div>
+          <span class="text-[9px] text-emerald-500 block truncate">Kasa Mevcudu</span>
         </div>
 
         <!-- 4. Günlük Faaliyet Sonucu -->
-        <div class="p-2.5 rounded-xl bg-cyan-500/10 border border-cyan-500/30">
-          <span class="text-[9px] font-bold text-cyan-300 block truncate">Faaliyet Sonucu</span>
-          <div id="closureNetProfit" class="text-sm sm:text-base font-extrabold text-cyan-400 font-mono mt-0.5">₺0</div>
-          <span class="text-[9px] text-cyan-500 block truncate">Ciro - Gider</span>
+        <div class="p-2 sm:p-2.5 rounded-xl bg-zinc-800/60 border border-zinc-700 min-w-0">
+          <span class="text-[9px] font-bold text-zinc-300 block truncate">Faaliyet Sonucu</span>
+          <div id="closureNetProfit" class="text-xs sm:text-sm font-extrabold text-zinc-100 font-mono mt-0.5 truncate">₺0</div>
+          <span class="text-[9px] text-zinc-400 block truncate">Ciro - Gider</span>
         </div>
       </div>
 
       <!-- BEKLEYEN ALACAKLAR & VERESİYELER (TAHSİL EDİLMEYENLER) -->
-      <div id="closureUnpaidDebtBox" class="p-2 rounded-xl bg-rose-500/10 border border-rose-500/25 flex items-center justify-between text-xs hidden">
-        <div class="flex items-center gap-1.5">
-          <i data-lucide="clock" class="w-3.5 h-3.5 text-rose-400"></i>
-          <span class="text-rose-300 font-semibold text-[11px]">Bekleyen Veresiye / Alacak:</span>
+      <div id="closureUnpaidDebtBox" class="p-2 rounded-xl bg-rose-500/10 border border-rose-500/25 flex items-center justify-between text-xs hidden min-w-0">
+        <div class="flex items-center gap-1.5 min-w-0">
+          <i data-lucide="clock" class="w-3.5 h-3.5 text-rose-400 shrink-0"></i>
+          <span class="text-rose-300 font-semibold text-[11px] truncate">Bekleyen Veresiye / Alacak:</span>
         </div>
-        <span id="closureUnpaidDebtAmount" class="font-mono font-bold text-rose-400 text-xs">₺0</span>
+        <span id="closureUnpaidDebtAmount" class="font-mono font-bold text-rose-400 text-xs shrink-0 ml-2">₺0</span>
       </div>
 
       <!-- KASA SAYIMI VE KASA FARKI (AÇIK / FAZLA KONTROLÜ) -->
-      <div class="p-3 rounded-2xl bg-gradient-to-r from-zinc-900/90 to-surface-card border border-zinc-800 space-y-2 text-xs">
-        <div class="flex items-center justify-between">
-          <span class="text-[10px] font-extrabold uppercase tracking-wider text-zinc-300 block">Kasa Sayımı & Kasa Farkı Doğrulama</span>
-          <span class="text-[9px] text-zinc-500">Fiziki Çekmece Kontrolü</span>
+      <div class="p-3 rounded-2xl bg-gradient-to-r from-zinc-900/90 to-surface-card border border-zinc-800 space-y-2 text-xs min-w-0">
+        <div class="flex items-center justify-between min-w-0">
+          <span class="text-[10px] font-extrabold uppercase tracking-wider text-zinc-300 block truncate">Kasa Sayımı & Kasa Farkı</span>
+          <span class="text-[9px] text-zinc-500 truncate ml-2">Fiziki Çekmece</span>
         </div>
-        <div class="grid grid-cols-2 gap-2 items-center">
-          <div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 items-center min-w-0">
+          <div class="min-w-0">
             <label class="block text-[10px] text-zinc-400 mb-0.5">Sayılan Gerçek Nakit (₺)</label>
-            <input type="number" id="closureCountedCashInput" oninput="App.onCountedCashChange()" placeholder="Örn: 3500" class="w-full bg-surface-input border border-surface-border rounded-xl px-3 py-2 text-zinc-100 font-mono font-bold text-sm focus:outline-none focus:border-amber-400 box-border">
+            <input type="number" id="closureCountedCashInput" oninput="App.onCountedCashChange()" placeholder="Örn: 3500" class="w-full min-w-0 bg-surface-input border border-surface-border rounded-xl px-3 py-2 text-zinc-100 font-mono font-bold text-sm focus:outline-none focus:border-amber-400 box-border">
           </div>
-          <div>
+          <div class="min-w-0">
             <label class="block text-[10px] text-zinc-400 mb-0.5">Kasa Durumu / Fark</label>
-            <div id="closureCashDiffBadge" class="p-2 rounded-xl bg-zinc-800 text-zinc-300 font-mono font-bold text-xs text-center border border-zinc-700">
+            <div id="closureCashDiffBadge" class="p-2 rounded-xl bg-zinc-800 text-zinc-300 font-mono font-bold text-xs text-center border border-zinc-700 min-h-[38px] flex items-center justify-center">
               Sayılan nakdi girin
             </div>
           </div>
@@ -2010,69 +2010,71 @@
       </div>
 
       <!-- Tahsilat Yöntemleri Dağılımı -->
-      <div class="p-3 rounded-xl bg-surface-card border border-surface-border space-y-2 text-xs">
-        <span class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 block">Tahsilat Dökümü</span>
-        <div class="grid grid-cols-3 gap-1.5 text-center font-mono">
-          <div class="p-2 rounded-lg bg-zinc-900 border border-zinc-800">
-            <span class="text-[10px] text-zinc-400 block">💵 Nakit</span>
-            <span id="closureSumCash" class="font-bold text-emerald-400 text-xs">₺0</span>
+      <div class="p-3 rounded-xl bg-surface-card border border-surface-border space-y-2 text-xs min-w-0">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-zinc-400 block truncate">Tahsilat Dökümü</span>
+        <div class="grid grid-cols-3 gap-1.5 text-center font-mono min-w-0">
+          <div class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 min-w-0">
+            <span class="text-[10px] text-zinc-400 block truncate">💵 Nakit</span>
+            <span id="closureSumCash" class="font-bold text-emerald-400 text-xs block truncate">₺0</span>
           </div>
-          <div class="p-2 rounded-lg bg-zinc-900 border border-zinc-800">
-            <span class="text-[10px] text-zinc-400 block">💳 Kart</span>
-            <span id="closureSumCard" class="font-bold text-zinc-200 text-xs">₺0</span>
+          <div class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 min-w-0">
+            <span class="text-[10px] text-zinc-400 block truncate">💳 Kart</span>
+            <span id="closureSumCard" class="font-bold text-zinc-200 text-xs block truncate">₺0</span>
           </div>
-          <div class="p-2 rounded-lg bg-zinc-900 border border-zinc-800">
-            <span class="text-[10px] text-zinc-400 block">📲 Havale</span>
-            <span id="closureSumTransfer" class="font-bold text-zinc-300 text-xs">₺0</span>
+          <div class="p-2 rounded-lg bg-zinc-900 border border-zinc-800 min-w-0">
+            <span class="text-[10px] text-zinc-400 block truncate">📲 Havale</span>
+            <span id="closureSumTransfer" class="font-bold text-zinc-300 text-xs block truncate">₺0</span>
           </div>
         </div>
       </div>
 
       <!-- Günlük Giderler & Masraflar Bölümü -->
-      <div class="p-3 rounded-xl bg-surface-card border border-surface-border space-y-2.5 text-xs">
-        <div class="flex items-center justify-between">
-          <div>
-            <span class="text-[10px] font-bold uppercase tracking-wider text-rose-400 block">Günün Masrafları / Giderler</span>
-            <p class="text-[10px] text-zinc-400">Çay, malzeme, fatura gibi harcamalar</p>
+      <div class="p-3 rounded-xl bg-surface-card border border-surface-border space-y-2.5 text-xs min-w-0">
+        <div class="flex items-center justify-between min-w-0">
+          <div class="min-w-0 mr-2">
+            <span class="text-[10px] font-bold uppercase tracking-wider text-rose-400 block truncate">Günün Masrafları / Giderler</span>
+            <p class="text-[10px] text-zinc-400 truncate">Çay, malzeme, fatura gibi harcamalar</p>
           </div>
-          <span id="closureTotalExpensesBadge" class="px-2 py-0.5 rounded bg-rose-500/15 text-rose-300 font-bold font-mono text-xs border border-rose-500/25">
+          <span id="closureTotalExpensesBadge" class="px-2 py-0.5 rounded bg-rose-500/15 text-rose-300 font-bold font-mono text-xs border border-rose-500/25 shrink-0">
             ₺0 Gider
           </span>
         </div>
 
-        <!-- Hızlı Gider Ekle Mini Formu -->
-        <div class="flex items-center gap-1.5">
-          <input type="text" id="expTitleInput" placeholder="Gider (örn: Çay/Şampuan)" class="flex-1 bg-surface-input border border-surface-border rounded-xl px-2.5 py-1.5 text-zinc-100 text-xs focus:outline-none focus:border-amber-400">
-          <input type="number" id="expAmountInput" placeholder="Tutar (₺)" min="1" step="5" class="w-20 bg-surface-input border border-surface-border rounded-xl px-2 py-1.5 text-zinc-100 text-xs font-mono font-bold focus:outline-none focus:border-amber-400">
-          <select id="expMethodInput" class="w-20 bg-surface-input border border-surface-border rounded-xl px-1.5 py-1.5 text-zinc-100 text-[10px] focus:outline-none">
-            <option value="cash">Nakit Kasa</option>
-            <option value="card">Kart / Banka</option>
-          </select>
-          <button type="button" onclick="App.addExpenseFromClosureModal()" class="px-2.5 py-1.5 bg-amber-500/15 text-amber-300 hover:bg-amber-500/25 border border-amber-500/30 rounded-xl font-bold text-xs shrink-0 transition-colors">
-            + Ekle
-          </button>
+        <!-- Hızlı Gider Ekle Mini Formu (Mobil Uyumlu & İki Satırlı Taşmaz Düzen) -->
+        <div class="space-y-1.5 min-w-0">
+          <input type="text" id="expTitleInput" placeholder="Gider açıklaması (örn: Çay, Şampuan)" class="w-full bg-surface-input border border-surface-border rounded-xl px-2.5 py-1.5 text-zinc-100 text-xs focus:outline-none focus:border-amber-400 box-border">
+          <div class="flex items-center gap-1.5 min-w-0">
+            <input type="number" id="expAmountInput" placeholder="Tutar (₺)" min="1" step="5" class="w-24 sm:w-28 bg-surface-input border border-surface-border rounded-xl px-2 py-1.5 text-zinc-100 text-xs font-mono font-bold focus:outline-none focus:border-amber-400 shrink-0 box-border">
+            <select id="expMethodInput" class="flex-1 min-w-0 bg-surface-input border border-surface-border rounded-xl px-2 py-1.5 text-zinc-100 text-[11px] focus:outline-none box-border">
+              <option value="cash">💵 Nakit Kasa</option>
+              <option value="card">💳 Kart / Banka</option>
+            </select>
+            <button type="button" onclick="App.addExpenseFromClosureModal()" class="px-3 py-1.5 bg-amber-500/15 text-amber-300 hover:bg-amber-500/25 border border-amber-500/30 rounded-xl font-bold text-xs shrink-0 transition-colors active:scale-95">
+              + Ekle
+            </button>
+          </div>
         </div>
 
         <!-- Giderler Listesi -->
-        <div id="closureExpensesList" class="space-y-1 max-h-24 overflow-y-auto divide-y divide-zinc-800/60 pt-0.5">
+        <div id="closureExpensesList" class="space-y-1 max-h-24 overflow-y-auto divide-y divide-zinc-800/60 pt-0.5 min-w-0">
           <!-- Populated by App -->
         </div>
       </div>
 
       <!-- Action Buttons -->
-      <div class="space-y-2 pt-1">
-        <button type="button" onclick="App.shareClosureZReportWhatsApp()" class="w-full py-2.5 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 font-bold text-xs flex items-center justify-center gap-1.5 transition-all active:scale-95 shadow-sm">
-          <i data-lucide="message-square" class="w-4 h-4"></i>
-          <span>WhatsApp İle Kasa Raporunu Paylaş / Kopyala</span>
+      <div class="space-y-2 pt-1 min-w-0">
+        <button type="button" onclick="App.shareClosureZReportWhatsApp()" class="w-full py-2.5 px-2 rounded-xl bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30 font-bold text-xs flex items-center justify-center gap-1.5 transition-all active:scale-95 shadow-sm text-center">
+          <i data-lucide="message-square" class="w-4 h-4 shrink-0"></i>
+          <span class="truncate">WhatsApp İle Kasa Raporunu Paylaş</span>
         </button>
-        <div class="grid grid-cols-2 gap-2">
-          <button type="button" onclick="UI.openAuditLogModal()" class="w-full py-2.5 bg-surface-card hover:bg-zinc-800 text-zinc-300 font-bold rounded-xl text-xs border border-zinc-800 transition-colors flex items-center justify-center gap-1">
-            <i data-lucide="history" class="w-3.5 h-3.5"></i>
-            <span>Geçmiş Raporlar</span>
+        <div class="grid grid-cols-2 gap-2 min-w-0">
+          <button type="button" onclick="UI.openAuditLogModal()" class="w-full py-2.5 px-1 bg-surface-card hover:bg-zinc-800 text-zinc-300 font-bold rounded-xl text-xs border border-zinc-800 transition-colors flex items-center justify-center gap-1 min-w-0">
+            <i data-lucide="history" class="w-3.5 h-3.5 shrink-0"></i>
+            <span class="truncate">Geçmiş Raporlar</span>
           </button>
-          <button type="button" onclick="App.saveAndArchiveClosure()" class="w-full py-2.5 gold-gradient hover:opacity-95 text-zinc-950 font-extrabold rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-md shadow-amber-500/20 active:scale-95 btn-shimmer">
-            <i data-lucide="lock" class="w-4 h-4 stroke-[2.5]"></i>
-            <span>Raporu Arşivle & Kilitle</span>
+          <button type="button" onclick="App.saveAndArchiveClosure()" class="w-full py-2.5 px-1 gold-gradient hover:opacity-95 text-zinc-950 font-extrabold rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-md shadow-amber-500/20 active:scale-95 btn-shimmer min-w-0">
+            <i data-lucide="lock" class="w-4 h-4 stroke-[2.5] shrink-0"></i>
+            <span class="truncate">Raporu Kilitle</span>
           </button>
         </div>
       </div>
@@ -2185,8 +2187,8 @@
   </div>
 
   <!-- MODAL 15: SİLİNENLER, GEÇMİŞ KASA RAPORLARI VE DÜZELTME KAYITLARI (AUDIT LOG) -->
-  <div id="auditLogModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-3 hidden overscroll-contain animate-fade-in">
-    <div class="w-full max-w-md bg-[#0e1017] border-t sm:border border-amber-500/30 rounded-t-3xl sm:rounded-2xl p-4 sm:p-5 max-h-[92vh] overflow-y-auto space-y-3.5 animate-slide-up sm:animate-none shadow-2xl" style="padding-bottom: max(1.25rem, env(safe-area-inset-bottom));">
+  <div id="auditLogModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-end sm:items-center justify-center p-0 sm:p-3 hidden overscroll-contain overflow-x-hidden animate-fade-in">
+    <div class="w-full max-w-lg bg-[#0e1017] border-t sm:border border-amber-500/30 rounded-t-3xl sm:rounded-2xl p-3.5 sm:p-5 max-h-[92vh] overflow-y-auto overflow-x-hidden space-y-3.5 animate-slide-up sm:animate-none shadow-2xl box-border" style="padding-bottom: max(1.25rem, env(safe-area-inset-bottom));">
       
       <div class="flex items-center justify-between pb-2 border-b border-zinc-800/80">
         <div class="flex items-center gap-2">
@@ -7484,10 +7486,10 @@ const UI = {
             ` : ''}
           </div>
 
-          <div class="grid grid-cols-3 gap-1 text-center font-mono text-[10px] pt-0.5">
-            <div class="p-1 rounded bg-zinc-900/80"><span class="text-zinc-500 block">Beklenen:</span><span class="text-emerald-400 font-bold">${(c.cashInHand || 0).toLocaleString('tr-TR')} ₺</span></div>
-            <div class="p-1 rounded bg-zinc-900/80"><span class="text-zinc-500 block">Sayılan:</span><span class="text-zinc-200 font-bold">${c.countedCash !== null ? c.countedCash.toLocaleString('tr-TR') + ' ₺' : '-'}</span></div>
-            <div class="p-1 rounded bg-zinc-900/80"><span class="text-zinc-500 block">Faaliyet:</span><span class="text-cyan-400 font-bold">${(c.netProfit || 0).toLocaleString('tr-TR')} ₺</span></div>
+          <div class="grid grid-cols-3 gap-1 text-center font-mono text-[10px] pt-0.5 min-w-0">
+            <div class="p-1 rounded bg-zinc-900/80 min-w-0"><span class="text-zinc-500 block truncate">Beklenen:</span><span class="text-emerald-400 font-bold block truncate">${(c.cashInHand || 0).toLocaleString('tr-TR')} ₺</span></div>
+            <div class="p-1 rounded bg-zinc-900/80 min-w-0"><span class="text-zinc-500 block truncate">Sayılan:</span><span class="text-zinc-200 font-bold block truncate">${c.countedCash !== null ? c.countedCash.toLocaleString('tr-TR') + ' ₺' : '-'}</span></div>
+            <div class="p-1 rounded bg-zinc-900/80 min-w-0"><span class="text-zinc-500 block truncate">Faaliyet:</span><span class="text-zinc-300 font-bold block truncate">${(c.netProfit || 0).toLocaleString('tr-TR')} ₺</span></div>
           </div>
         </div>
       `;
