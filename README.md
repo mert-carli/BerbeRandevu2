@@ -15,6 +15,8 @@
   <strong>Mobil öncelikli, çok turlu konuşma bağlamlı Türkçe sesli asistanlı, mola ve kapalı gün korumalı, no-show yönetimli, veresiye ayrıştırmalı Gün Sonu Kasa Raporlu, IndexedDB aynalı modern berber PWA uygulaması.</strong>
 </p>
 
+<p align="center"><a href="https://berbe-randevu2.vercel.app"><strong>Live Demo: https://berbe-randevu2.vercel.app</strong></a></p>
+
 </div>
 
 ---
